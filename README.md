@@ -8,9 +8,12 @@ selecting multiple neighbors from a single direction, we choose the closest neig
 each image can have up to 4 pairs of neighboring images. Subsequently, redundant neighboring images are removed. And we apply the Scale Invariant Feature Transform (SIFT) algorithm to perform feature matching and the Random Sample Consensus (RANSAC) algorithm to eliminate outliers for each pair of neighboring images.
 
 3) Transformation optimization
-Assuming a total of N images to be stitched. Let Ii be the ith image (i = 1, · · · , N) and Ti be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
+Assuming a total of N images to be stitched. Let I~i~ be the i~th~ image (i = 1, · · · , N) and T~i~ be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
 
-For a matching image pair (Ii, Ij), the following two equations can be constructed using the homography model:
+For a matching image pair (I~i, I~j), the following two equations can be constructed using the homography model:
+
+[x~i~]
+
 where (x( ik), yi(k)) denotes the coordinate of the kth matching point in image Ii and Tir represents the rth row of Ti (i.e., r = (1, 2)).
 
 By stacking above equations for all the matching image pairs, the optimal affine transformation problem can be formulated as
