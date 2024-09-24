@@ -12,21 +12,21 @@ each image can have up to 4 pairs of neighboring images. Subsequently, redundant
 
 2) **Transformation optimization**
 
-Assuming a total of N images to be stitched. Let I<sub>i</sub> be the i<sub>th</sub> image (i = 1, · · · , N) and T<sub>i</sub> be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
+Assuming a total of N images to be stitched. Let *I<sub>i</sub>* be the i<sub>th</sub> image (i = 1, · · · , N) and *T<sub>i</sub>* be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
 
-For a matching image pair (I<sub>i</sub>, I<sub>j</sub>), the following two equations can be constructed using the homography model:
+For a matching image pair (*I<sub>i</sub>*, *I<sub>j</sub>*), the following two equations can be constructed using the homography model:
 
-*[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>1</sup> = [x<sub>j</sub><sup>(k)</sup>, y<sub>j</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>1</sup>*
+*[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1]* $\cdot$ *T<sub>i</sub><sup>1</sup>* = *[x<sub>j</sub><sup>(k)</sup>, y<sub>j</sub><sup>(k)</sup>, 1]* $\cdot$ *T<sub>j</sub><sup>1</sup>*
 
-*[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>2</sup> = [x<sub>j</sub><sup>(k)</sup>, y<sub>j</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>2</sup>*
+*[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1]* $\cdot$ *T<sub>i</sub><sup>2</sup>* = *[x<sub>j</sub><sup>(k)</sup>, y<sub>j</sub><sup>(k)</sup>, 1]* $\cdot$ *T<sub>j</sub><sup>2</sup>*
 
-where (x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>) denotes the coordinate of the k<sub>th</sub> matching point in image I<sub>i</sub> and T<sub>i</sub><sup>r</sup> represents the r<sub>th</sub> row of T<sub>i</sub> (i.e., r = (1, 2)).
+where (*x<sub>i</sub><sup>(k)</sup>*, *y<sub>i</sub><sup>(k)</sup>*) denotes the coordinate of the k<sub>th</sub> matching point in image *I<sub>i</sub>* and *T<sub>i</sub><sup>r</sup>* represents the r<sub>th</sub> row of T<sub>i</sub> (i.e., r = (1, 2)).
 
 By stacking above equations for all the matching image pairs, the optimal affine transformation problem can be formulated as
 
 *AX = 0*
 
-where A and X are constructed as Eq. (4) and Eq. (5), respectively.
+where *A* and *X* are constructed as Eq. (4) and Eq. (5), respectively.
 
 *X = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>*
 
