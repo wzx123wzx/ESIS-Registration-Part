@@ -12,7 +12,7 @@ Assuming a total of N images to be stitched. Let I<sub>i</sub> be the i<sub>th</
 
 For a matching image pair (I<sub>i</sub>, I<sub>j</sub>), the following two equations can be constructed using the homography model:
 
-[x<sub>i</sub><sup>(k)</sup>]
+[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>1</sup> = [x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>1</sup>
 
 where (x( ik), yi(k)) denotes the coordinate of the kth matching point in image Ii and Tir represents the rth row of Ti (i.e., r = (1, 2)).
 
