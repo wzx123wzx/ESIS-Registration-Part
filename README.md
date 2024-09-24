@@ -26,11 +26,11 @@ By stacking above equations for all the matching image pairs, the optimal affine
 
 where *A* and *X* are constructed as following, respectively.
 
-*A = $$\begin{matrix}
+$$\begin{matrix}
 0&1&1\\
 1&1&0\\
 1&0&1\\
-\end{matrix}$$*
+\end{matrix}$$
 
 *X = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>*
 
