@@ -76,7 +76,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
 <table style="width:100%">
   <tr>
     <th>Dataset</th>
-    <th>MUAV</th>
     <th>MGRAPH</th>
     <th>MegaStitch affine</th>
     <th>MegaStitch bundle adjustmnet</th>
@@ -85,7 +84,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
    </tr>
   <tr>
     <td>Gregg</td>
-    <td>14268</td>
     <td>21246</td>
     <td>28826</td>
     <td>14410</td>
@@ -93,7 +91,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
   </tr>
   <tr>
     <td>Golf Course</td>
-    <td>59616</td>
     <td>88268</td>
     <td>118194</td>
     <td>59094</td>
@@ -101,7 +98,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
   </tr>
   <tr>
     <td>4thAveReservoir</td>
-    <td>6648</td>
     <td>9812</td>
     <td>13426</td>
     <td>6710</td>
@@ -109,7 +105,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
   </tr>
   <tr>
     <td>AdobeButtes1</td>
-    <td>13040</td>
     <td>20534</td>
     <td>27708</td>
     <td>13851</td>
@@ -117,7 +112,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
   </tr>
   <tr>
     <td>AdobeButtes2</td>
-    <td>31404</td>
     <td>46547</td>
     <td>62650</td>
     <td>31322</td>
@@ -129,7 +123,6 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
 <table style="width:100%">
   <tr>
     <th>Dataset</th>
-    <th>MUAV</th>
     <th>MGRAPH</th>
     <th>MegaStitch</th>
     <th>Ours</th>
@@ -137,35 +130,30 @@ We evaluate our registration quality with MegaStitch[2] and MGRAPH[1]. Compared 
    </tr>
   <tr>
     <td>Gregg</td>
-    <td>6.13</td>
     <td>7.57</td>
     <td>2.31</td>
     <td><b>2.23</b></td>
   </tr>
   <tr>
     <td>Golf Course</td>
-    <td>3.51</td>
     <td>3.81</td>
     <td>1.65</td>
     <td><b>1.52</b></td>
   </tr>
   <tr>
     <td>4thAveReservoir</td>
-    <td>2.94</td>
     <td>2.60</td>
     <td>1.94</td>
     <td><b>1.62</b></td>
   </tr>
   <tr>
     <td>AdobeButtes1</td>
-    <td>2.06</td>
     <td>2.27</td>
     <td>1.52</td>
     <td><b>1.41</b></td>
   </tr>
   <tr>
     <td>AdobeButtes2</td>
-    <td>3.28</td>
     <td>5.91</td>
     <td>1.51</td>
     <td><b>1.47</b></td>
@@ -178,7 +166,6 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
 <table style="width:100%">
   <tr>
     <th>Dataset</th>
-    <th>MUAV</th>
     <th>MGRAPH</th>
     <th>MegaStitch</th>
     <th>MetaShape*</th>
@@ -187,7 +174,6 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
    </tr>
   <tr>
     <td>Gregg</td>
-    <td>14m2s</td>
     <td>16m43s</td>
     <td>21s</td>
     <td>1m46s</td>
@@ -195,7 +181,6 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
   </tr>
   <tr>
     <td>Golf Course</td>
-    <td>4h45m34s</td>
     <td>5h13m25s</td>
     <td>6m30s</td>
     <td>12m1s</td>
@@ -203,7 +188,6 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
   </tr>
   <tr>
     <td>4thAveReservoir</td>
-    <td>4m10s</td>
     <td>3m14s</td>
     <td>3s</td>
     <td>1m11s</td>
@@ -211,7 +195,6 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
   </tr>
   <tr>
     <td>AdobeButtes1</td>
-    <td>15m18s</td>
     <td>16m14s</td>
     <td>9s</td>
     <td>2m19s</td>
@@ -219,7 +202,6 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
   </tr>
   <tr>
     <td>AdobeButtes2</td>
-    <td>58m53s</td>
     <td>1h28m58s</td>
     <td>1m59s</td>
     <td>6m29s</td>
