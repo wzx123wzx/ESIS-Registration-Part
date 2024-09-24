@@ -26,11 +26,12 @@ By stacking above equations for all the matching image pairs, the optimal affine
 
 where *A* and *X* are constructed as following, respectively.
 
-A = $$\begin{matrix}
-0&1&1\\
-1&1&0\\
-1&0&1\\
-\end{matrix}$$
+$$\begin{bmatrix}
+...&...&...&...&...&...&...&...&...&...&...&...&...&...&...\\
+0  &*x<sub>i</sub><sup>(k)</sup>*&*y<sub>i</sub><sup>(k)</sup>*&1&0&0&0&**0**&-*x<sub>j</sub><sup>(k)</sup>*&-*y<sub>j</sub><sup>(k)</sup>*&-1&0&0&0&**0**\\   
+0  &*x<sub>i</sub><sup>(k)</sup>*&*y<sub>i</sub><sup>(k)</sup>*&1&0&0&0&**0**&-*x<sub>j</sub><sup>(k)</sup>*&-*y<sub>j</sub><sup>(k)</sup>*&-1&0&0&0&**0**\\  
+...&...&...&...&...&...&...&...&...&...&...&...&...&...&...\\
+\end{bmatrix}$$
 
 *X = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>*
 
