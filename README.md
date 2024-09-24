@@ -30,7 +30,7 @@ where *A* and *X* are constructed as following, respectively.
 
 *X = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>*
 
-Subsequently, the optimal affine transformation can be determined by employing linear least square algorithm to solve Eq. 3.
+Subsequently, the optimal affine transformation can be determined by employing linear least square algorithm to solve *AX = 0*.
 
 ## Registration Performance
 ### Dataset details
