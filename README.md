@@ -11,6 +11,7 @@ each image can have up to 4 pairs of neighboring images. Subsequently, redundant
 Assuming a total of N images to be stitched. Let I~i~ be the i~th~ image (i = 1, · · · , N) and T~i~ be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
 
 For a matching image pair (I~i, I~j), the following two equations can be constructed using the homography model:
+a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 
 [x~i~]
 
