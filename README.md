@@ -21,8 +21,11 @@ where (x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>) denotes the coo
 By stacking above equations for all the matching image pairs, the optimal affine transformation problem can be formulated as
 
 AX = 0
+
 where A and X are constructed as Eq. (4) and Eq. (5), respectively.
+
 x = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>
+
 Subsequently, the optimal affine transformation can be determined by employing linear least square algorithm to solve Eq. 3.
 
 ## Registration Performance
