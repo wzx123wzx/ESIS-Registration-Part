@@ -12,18 +12,19 @@ Assuming a total of N images to be stitched. Let I<sub>i</sub> be the i<sub>th</
 
 For a matching image pair (I<sub>i</sub>, I<sub>j</sub>), the following two equations can be constructed using the homography model:
 
-[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>1</sup> = [x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>1</sup>
+[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>1</sup> = [x<sub>j</sub><sup>(k)</sup>, y<sub>j</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>1</sup>
 
-[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>2</sup> = [x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>2</sup>
+[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>2</sup> = [x<sub>j</sub><sup>(k)</sup>, y<sub>j</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>2</sup>
 
 where (x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>) denotes the coordinate of the k<sub>th</sub> matching point in image I<sub>i</sub> and T<sub>i</sub><sup>r</sup> represents the r<sub>th</sub> row of T<sub>i</sub> (i.e., r = (1, 2)).
 
 By stacking above equations for all the matching image pairs, the optimal affine transformation problem can be formulated as
 
+AX = 0
 where A and X are constructed as Eq. (4) and Eq. (5), respectively.
+x = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>
+Subsequently, the optimal affine transformation can be determined by employing linear least square algorithm to solve Eq. 3.
 
-Subsequently, the optimal affine transformation can be determined by employing linear least square algorithm to solve
-Eq. (3).
 ## Registration Performance
 ### Dataset details
 We evaluate our algorithm on 5 image datasets, which are all captured by Phantom 3 Advanced drone with resolution of 4000 × 3000 and available in Dronemapper website[6]. We also propose an efficient matching image pair selection method. The image number and selected image pair number is shown following.
