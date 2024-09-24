@@ -26,7 +26,7 @@ By stacking above equations for all the matching image pairs, the optimal affine
 
 where *A* and *X* are constructed as following, respectively.
 
-$$\begin{matrix}
+A = $$\begin{matrix}
 0&1&1\\
 1&1&0\\
 1&0&1\\
