@@ -7,8 +7,7 @@ For each image, we select its 4 nearest neighbors based on GPS coordinates. Spec
 selecting multiple neighbors from a single direction, we choose the closest neighbor from each zone. Fig. 1 illustrates that
 each image can have up to 4 pairs of neighboring images. Subsequently, redundant neighboring images are removed. And we apply the Scale Invariant Feature Transform (SIFT) algorithm to perform feature matching and the Random Sample Consensus (RANSAC) algorithm to eliminate outliers for each pair of neighboring images.
 2) Transformation optimization
-Assuming a total of N
-images to be stitched. Let Ii be the ith image (i = 1, · · · , N)
+Assuming a total of N images to be stitched. Let Ii be the ith image (i = 1, · · · , N)
 and Ti be its affine transformation matrix, which is 2 × 3
 matrix. To ensure aligned images are geometrically consistent,
 the location of transformed matching points should be close in
