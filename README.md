@@ -2,12 +2,13 @@
 ## Algorithm details
 Our global registration optimization method has two main steps: feature matching and transformation optimization.
 
-1) Feature matching
+1) **Feature matching**
 For each image, we select its 4 nearest neighbors based on GPS coordinates. Specifically, as shown in Fig. 1, we define a coordinate system centered on each image using latitude and longitude as axes. These axes divide the coverage area into 4 equal-sized zones. To ensure registration quality across all orientations and avoid
 selecting multiple neighbors from a single direction, we choose the closest neighbor from each zone. Fig. 1 illustrates that
 each image can have up to 4 pairs of neighboring images. Subsequently, redundant neighboring images are removed. And we apply the Scale Invariant Feature Transform (SIFT) algorithm to perform feature matching and the Random Sample Consensus (RANSAC) algorithm to eliminate outliers for each pair of neighboring images.
 ![image](4NN_select.png)
-3) Transformation optimization
+
+3) **Transformation optimization**
 Assuming a total of N images to be stitched. Let I<sub>i</sub> be the i<sub>th</sub> image (i = 1, · · · , N) and T<sub>i</sub> be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
 
 For a matching image pair (I<sub>i</sub>, I<sub>j</sub>), the following two equations can be constructed using the homography model:
