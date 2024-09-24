@@ -5,9 +5,7 @@ Our global registration optimization method has two main steps: feature matching
 1) **Feature matching**
 
 
-For each image, we select its 4 nearest neighbors based on GPS coordinates. Specifically, as shown in Fig. 1, we define a coordinate system centered on each image using latitude and longitude as axes. These axes divide the coverage area into 4 equal-sized zones. To ensure registration quality across all orientations and avoid
-selecting multiple neighbors from a single direction, we choose the closest neighbor from each zone. Fig. 1 illustrates that
-each image can have up to 4 pairs of neighboring images. Subsequently, redundant neighboring images are removed. And we apply the Scale Invariant Feature Transform (SIFT) algorithm to perform feature matching and the Random Sample Consensus (RANSAC) algorithm to eliminate outliers for each pair of neighboring images.
+For each image, we select its 4 nearest neighbors based on GPS coordinates. Specifically, as shown in following figure, we define a coordinate system centered on each image using latitude and longitude as axes. These axes divide the coverage area into 4 equal-sized zones. To ensure registration quality across all orientations and avoid selecting multiple neighbors from a single direction, we choose the closest neighbor from each zone.Following figure illustrates that each image can have up to 4 pairs of neighboring images. Subsequently, redundant neighboring images are removed. And we apply the Scale Invariant Feature Transform (SIFT) algorithm to perform feature matching and the Random Sample Consensus (RANSAC) algorithm to eliminate outliers for each pair of neighboring images.
 ![image](4NN_select.png)
 
 2) **Transformation optimization**
@@ -26,7 +24,13 @@ By stacking above equations for all the matching image pairs, the optimal affine
 
 *AX = 0*
 
-where *A* and *X* are constructed as Eq. (4) and Eq. (5), respectively.
+where *A* and *X* are constructed as following, respectively.
+
+*A = $$\begin{matrix}
+0&1&1\\
+1&1&0\\
+1&0&1\\
+\end{matrix}$$*
 
 *X = [T<sub>1</sub><sup>1</sup>, T<sub>1</sub><sup>2</sup>, ..., T<sub>N</sub><sup>1</sup>, T<sub>N</sub><sup>2</sup>]<sup>T</sup>*
 
