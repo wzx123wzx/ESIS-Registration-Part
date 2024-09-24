@@ -14,7 +14,9 @@ For a matching image pair (I<sub>i</sub>, I<sub>j</sub>), the following two equa
 
 [x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>1</sup> = [x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>1</sup>
 
-where (x( ik), yi(k)) denotes the coordinate of the kth matching point in image Ii and Tir represents the rth row of Ti (i.e., r = (1, 2)).
+[x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>i</sub><sup>2</sup> = [x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>, 1] $\cdot$ T<sub>j</sub><sup>2</sup>
+
+where (x<sub>i</sub><sup>(k)</sup>, y<sub>i</sub><sup>(k)</sup>) denotes the coordinate of the k<sub>th</sub> matching point in image I<sub>i</sub> and T<sub>i</sub><sup>r</sup> represents the r<sub>th</sub> row of T<sub>i</sub> (i.e., r = (1, 2)).
 
 By stacking above equations for all the matching image pairs, the optimal affine transformation problem can be formulated as
 
