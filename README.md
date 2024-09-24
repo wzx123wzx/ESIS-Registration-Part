@@ -6,14 +6,19 @@ Our global registration optimization method has two main steps: feature matching
 For each image, we select its 4 nearest neighbors based on GPS coordinates. Specifically, as shown in Fig. 1, we define a coordinate system centered on each image using latitude and longitude as axes. These axes divide the coverage area into 4 equal-sized zones. To ensure registration quality across all orientations and avoid
 selecting multiple neighbors from a single direction, we choose the closest neighbor from each zone. Fig. 1 illustrates that
 each image can have up to 4 pairs of neighboring images. Subsequently, redundant neighboring images are removed. And we apply the Scale Invariant Feature Transform (SIFT) algorithm to perform feature matching and the Random Sample Consensus (RANSAC) algorithm to eliminate outliers for each pair of neighboring images.
-2) Transformation optimization
-Assuming a total of N images to be stitched. Let Ii be the ith image (i = 1, · · · , N)
-and Ti be its affine transformation matrix, which is 2 × 3
-matrix. To ensure aligned images are geometrically consistent,
-the location of transformed matching points should be close in
-global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization
-function
 
+3) Transformation optimization
+Assuming a total of N images to be stitched. Let Ii be the ith image (i = 1, · · · , N) and Ti be its affine transformation matrix, which is 2 × 3 matrix. To ensure aligned images are geometrically consistent, the location of transformed matching points should be close in global coordinate system. Thus, we use coordinates of matching points to construct our linear registration optimization function.
+
+For a matching image pair (Ii, Ij), the following two equations can be constructed using the homography model:
+where (x( ik), yi(k)) denotes the coordinate of the kth matching point in image Ii and Tir represents the rth row of Ti (i.e., r = (1, 2)).
+
+By stacking above equations for all the matching image pairs, the optimal affine transformation problem can be formulated as
+
+where A and X are constructed as Eq. (4) and Eq. (5), respectively.
+
+Subsequently, the optimal affine transformation can be determined by employing linear least square algorithm to solve
+Eq. (3).
 # Registration Performance
 ## Dataset details
 We evaluate our algorithm on 5 image datasets, which are all captured by Phantom 3 Advanced drone with resolution of 4000 × 3000 and available in Dronemapper website[6]. We also propose an efficient matching image pair selection method. The image number and selected image pair number is shown following.
