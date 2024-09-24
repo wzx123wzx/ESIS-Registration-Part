@@ -237,9 +237,9 @@ As for efficiency analysis, we add software MetaShape[3] for comparison.
 
 3. Agisoft, “Agisoft metashape.” [Online]. Available: https://www.agisoft.cn
 
-4. A. Mihal, “Enblend.” [Online]. Available: https://sourceforge.net/projects/enblend/
+4. M. A. Fischler and R. C. Bolles, “Random sample consensus: A paradigm for model fitting with applications to image analysis and automated cartography,” Commun. ACM, vol. 24, no. 6, p. 381–395, jun 1981.
 
-5. Q. Jia, Z. Li, X. Fan, H. Zhao, S. Teng, X. Ye, and L. J. Latecki, “Leveraging line-point consistence to preserve structures for wide parallax image stitching,” in 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021, pp. 12 181–12 190.
+5. D. G. Lowe, “Distinctive image features from scale-invariant keypoints,” Int. J. Comput. Vision, vol. 60, no. 2, p. 91–110, nov 2004.
 
 6. “Dronemapper,” accessed: June. 12, 2023. [Online]. Available: https://dronemapper.com/sample_data/
 
